@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $.ajax({
-        url: "/JS/pro.json",
+        url: "pro.json",
         type: "get",
         success: function (objecdata){
             
@@ -54,5 +54,4 @@ $(document).ready(function () {
 
 let getItemfromlocalstorage=(key)=>{
     return JSON.parse(localStorage.getItem(key))
-}
-// console.log(getItemfromlocalstorage)
+};

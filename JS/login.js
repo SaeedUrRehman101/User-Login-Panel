@@ -181,7 +181,7 @@ $(document).ready(function () {
             // console.log(previewdta);
             localStorage.setItem('details', JSON.stringify(previewdta));
             alert('Data has been submited Succesfully.....')
-            location.assign('index.html')
+            location.assign('/index.html')
 
         }
 
