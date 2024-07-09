@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="x-icon" href="Images/man.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    </style>
+
+    <script>
+
+        let url = window.location.href;
+        // console.log(location);
+
+        let getURL = new URL(url);
+        // console.log(getURL);
+
+        let UserID = getURL.searchParams.get("userId")
+        // console.log(UserID);
+        
+        if(!UserID){
+            alert("Please First Login to Your Account...");
+            window.location.href="login.html";
+        }
+
+    </script>
+
+    <title>User Dashboard</title>
+</head>
+
+<body>
+
+    <div class="dashboard">
+        <h1 class="fw-bold">Admin Dashboard</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="grid">
+                <div class="col-xl-8 col-lg-8 col-sm-12">
+                    <div class="dash-content">
+                        <h1 class="fs-2 fw-semibold text-uppercase">Hello!</h1>
+                        <p class="fs-6 fw-normal text-uppercase">Welcome to Your profile <span class="username"></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-xl-12 col-lg-12 col-sm-12">
+                    <div class="user-dashboard">
+                        <div class="container mt-3">
+                            <div class="user-img">
+                                <img src="user.png" alt="">
+                                <h1 class="username">Michel</h1>
+                                <span class="para">Web Developer</span>
+                            </div>
+                            <div class="edit-opt">
+                                <p>If you want to edit your personal information then click here <br> <button
+                                        class="button" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">Edit</button></p>
+
+                                <p>If you want to logout from Your profile Click here!<br> <button id="logout"
+                                        class="button2" type="button">LogOut</button></p>
+
+
+                                <p>If you want to Delete Your profile Click here!<br> <button id="delete"
+                                        class="button2" type="button">Delete</button></p>
+
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static"
+                                    data-bs-keyboard="false">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Your Personal
+                                                    Information:</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="dash-input">
+                                                    <input type="text" placeholder="User Name" name="" id="name">
+                                                    <input type="email" placeholder="User Email" name="" id="email">
+                                                    <input type="number" placeholder="Phone Number" name="" id="phone">
+                                                    <input type="password" placeholder="Password" name="" id="password">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button class="update" type="button" class="btn">Update it!</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="dashboard.js"></script> -->
+    <script src="JS/register.js"></script>
+
+</body>
+
+</html>

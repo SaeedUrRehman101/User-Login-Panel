@@ -42,6 +42,13 @@ label {
     color: var(--textColor);
 }
 
+.smooth-wrapper{
+    overflow: visible;
+    width: 100%;
+    /* set a height because the contents are position: absolute, thus natively there's no height */
+    height: 4000px;
+}
+
 a {
     text-decoration: none;
 }
